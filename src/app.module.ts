@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
+import { ContactModule } from './contacts/contacts.module';
 
 @Module({
   imports: [
@@ -11,6 +12,7 @@ import { MongooseModule } from '@nestjs/mongoose';
         autoCreate: true,
       },
     ),
+    ContactModule,
   ],
   controllers: [AppController],
   providers: [AppService],
